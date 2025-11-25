@@ -1,0 +1,11 @@
+from math import sqrt
+numbers = input('Введите числа через пробел ')
+mast1 = numbers.split(' ')
+l = []
+dlina = len(mast1)
+dlinastr = int(sqrt(dlina)) #2
+# for i in range(0, dlina, dlinastr):
+#     l.append(mast1[i:i+dlinastr])
+l = [mast1[i:i+dlinastr] for i in range(0, dlina, dlinastr)]
+for el in l:
+    print(' '.join(el))
